@@ -1,0 +1,6 @@
+.c-bottles {
+  display:               grid;
+  grid-template-columns: repeat(7, auto);
+  width:                 fit-content;
+  grid-gap:              24px;
+}

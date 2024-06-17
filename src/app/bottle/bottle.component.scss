@@ -1,0 +1,25 @@
+@use 'styles/settings' as settings;
+@use 'styles/tools'    as tools;
+
+.c-bottle {
+  display:         flex;
+  flex-direction:  column-reverse;
+  justify-content: flex-start;
+  border:          3px solid black;
+  padding:         6px;
+  align-items:     center;
+  height:          400px;
+  width:           100px;
+
+  &--active,
+  &--completed {
+    border-width: 6px;
+    padding:      3px;
+  }
+
+  @each $name, $_color in settings.$fluid-colors {
+    &--#{ $name }:is(&--completed) {
+      border-color: tools.get-color($name);
+    }
+  }
+}

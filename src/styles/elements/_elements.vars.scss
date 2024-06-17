@@ -1,0 +1,8 @@
+@use '../settings/settings.colors' as colors;
+
+
+:root {
+  @each $name, $color in colors.$fluid-colors {
+    --#{ $name }: #{ $color };
+  }
+}

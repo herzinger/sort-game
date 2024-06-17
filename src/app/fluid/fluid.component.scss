@@ -1,0 +1,18 @@
+@use 'styles/settings' as settings;
+@use 'styles/tools'    as tools;
+
+
+:host {
+  display: block;
+}
+
+.c-fluid {
+  width:  100px;
+  height: 100px;
+
+  @each $name, $_color in settings.$fluid-colors {
+    &--#{ $name } {
+      background-color: tools.get-color($name);
+    }
+  }
+}

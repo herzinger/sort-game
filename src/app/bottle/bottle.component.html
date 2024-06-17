@@ -1,0 +1,10 @@
+@if (bottle) {
+  <div [class]="classList"
+       [class.c-bottle--completed]="bottle.isCompleted()"
+       [class.c-bottle--active]="isActive">
+
+    @for (fluid of bottle.fluids; track fluid.id) {
+      <app-fluid [fluid]="fluid"></app-fluid>
+    }
+  </div>
+}

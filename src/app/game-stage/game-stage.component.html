@@ -1,0 +1,12 @@
+<h1>Teste</h1>
+
+<section class="c-bottles">
+
+  @for (bottle of bottles; track bottle.id) {
+    <app-bottle
+      [isActive]="bottle.id === activeBottle?.id"
+      [bottle]="bottle"
+      (click)="selectBottle(bottle)">
+    </app-bottle>
+  }
+</section>
